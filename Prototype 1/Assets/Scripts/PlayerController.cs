@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int forMagnatude = 10;
-    public float turnMagnatude = .3f;
+    public int forMagnatude = 1000;
+    public int turnMagnatude = 1000;
     private float horizInput;
     private float vertInput;
     public Rigidbody rb;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         vertInput = Input.GetAxis("Vertical");
         horizInput = Input.GetAxis("Horizontal");
         //Move Car Forward
-        rb.velocity = (Vector3.forward * forMagnatude * vertInput);
-        rb.angularVelocity = (Vector3.up * turnMagnatude * horizInput);
+        rb.AddRelativeForce(Vector3.forward * forMagnatude * vertInput);
+        rb.AddRelativeTorque(Vector3.up * turnMagnatude * horizInput);
     }
 }
