@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int forMagnatude = 1000;
-    public int turnMagnatude = 1000;
+    public int forMagnatude = 70000;
+    public int turnMagnatude = 70000;
     private float horizInput;
     private float vertInput;
-    public Rigidbody rb;
+    private Rigidbody rb;
+    private Vector3 move;
+    private Vector3 rotate;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +23,12 @@ public class PlayerController : MonoBehaviour
     {
         vertInput = Input.GetAxis("Vertical");
         horizInput = Input.GetAxis("Horizontal");
+
+        move = Vector3.forward * forMagnatude * vertInput;
+        rotate = Vector3.up * turnMagnatude * horizInput;
+
         //Move Car Forward
-        rb.AddRelativeForce(Vector3.forward * forMagnatude * vertInput);
-        rb.AddRelativeTorque(Vector3.up * turnMagnatude * horizInput);
+        rb.AddRelativeForce(move);
+        rb.AddRelativeTorque(rotate);
     }
 }
