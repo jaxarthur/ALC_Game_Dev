@@ -2140,6 +2140,8 @@ MonoBehaviour:
   player: {fileID: 1434842016}
   offset: {x: 0, y: 5, z: -7}
   rotation: {x: 0, y: 0, z: 0}
+  dist: 5
+  rot: 20
 --- !u!1001 &964546809
 PrefabInstance:
   m_ObjectHideFlags: 0
