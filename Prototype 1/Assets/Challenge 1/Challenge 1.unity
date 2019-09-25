@@ -1266,7 +1266,7 @@ Camera:
   far clip plane: 1002.14
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 40
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1384,8 +1384,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Obs: {fileID: 1747154928430931091, guid: bda5d6c91cd0b4241815f90c1459e437, type: 3}
   dist: 50
-  space: 3
-  amount: 10
+  space: 10
+  amount: 50
+  begin: 50
+  range: 50
 --- !u!1 &547135094
 GameObject:
   m_ObjectHideFlags: 0
