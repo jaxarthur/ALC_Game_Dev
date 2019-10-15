@@ -21,8 +21,12 @@ public class RemoveOutOfBounds : MonoBehaviour
     {
         pos = transform.position;
 
-        if (pos.z > upperBound || pos.z < lowerBound || pos.x > rightBound || pos.x < lowerBound)
+        if (pos.z > upperBound || pos.x > rightBound || pos.x < lowerBound)
         {
+            Destroy(gameObject);
+        } else if (pos.z < lowerBound)
+        {
+            Debug.Log("Gameover");
             Destroy(gameObject);
         }
     }

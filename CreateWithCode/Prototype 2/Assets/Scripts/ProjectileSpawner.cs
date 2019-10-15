@@ -30,7 +30,7 @@ public class ProjectileSpawner : MonoBehaviour
         {
             for (int i = projectileCount* -1; i<projectileCount+1; i++)
             {
-                Instantiate(projectile, transform.position + Vector3.forward, Quaternion.AngleAxis(i* projectileSpread, Vector3.up));
+                Instantiate(projectile, transform.position + Vector3.forward+ Vector3.up, Quaternion.AngleAxis(i* projectileSpread, Vector3.up));
             }
             coolDownTimer = 0;
         }
